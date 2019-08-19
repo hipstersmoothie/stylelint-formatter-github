@@ -1,3 +1,15 @@
+# v0.2.2 (Mon Aug 19 2019)
+
+#### 🐛  Bug Fix
+
+- fix bug when loading env vars [#7](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/7) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.2.1 (Mon Aug 19 2019)
 
 #### 🐛  Bug Fix

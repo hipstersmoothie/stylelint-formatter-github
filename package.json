@@ -33,17 +33,12 @@
     "stylelint": ">= 10"
   },
   "dependencies": {
-    "@octokit/app": "^4.1.0",
-    "@octokit/request": "^5.0.2",
     "@octokit/rest": "^16.28.7",
-    "env-ci": "^4.1.1",
-    "execa": "^2.0.4",
+    "create-check": "^0.2.2",
     "stylelint-formatter-pretty": "^1.1.2"
   },
   "devDependencies": {
-    "@types/env-ci": "^3.1.0",
     "@types/eslint": "^4.16.8",
-    "@types/lru-cache": "^5.1.0",
     "@types/stylelint": "^9.10.1",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",

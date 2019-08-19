@@ -2,7 +2,7 @@
   <img  height="200"
     src="./logo.png">
   <h1>stylelint-formatter-github</h1>
-  <p>See stylelint errors and warnings directly in pull requests.</p>
+  <p>See stylelint errors and warnings directly in pull requests</p>
 </div>
 
 ## Highlights

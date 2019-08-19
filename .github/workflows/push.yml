@@ -21,7 +21,6 @@ jobs:
         yarn
         yarn build
         yarn lint
-        yarn lint:example
   release:
     runs-on: ubuntu-latest
 

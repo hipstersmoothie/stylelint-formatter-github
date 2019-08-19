@@ -5,9 +5,7 @@ import pretty from 'stylelint-formatter-pretty';
 
 import Octokit from '@octokit/rest';
 
-const APP_ID = process.env.STYLELINT_APP_ID
-  ? Number(process.env.STYLELINT_APP_ID)
-  : 38894;
+const APP_ID = 38894;
 /**
  * Before you say anything I *know* this is horribly insecure.
  *
@@ -21,9 +19,7 @@ const APP_ID = process.env.STYLELINT_APP_ID
  * metadata and read/write checks. So the attack surface is really only
  * messing with a users checks, which is not too risky.
  */
-const PRIVATE_KEY =
-  process.env.STYLELINT_PRIVATE_KEY ||
-  `-----BEGIN RSA PRIVATE KEY-----
+const PRIVATE_KEY = `-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEA2d7s/bFVyjeR3aueP1voZaSDG3KoR9e/4qobOdhId9aFPS78
 3hbzcT2tnxL55nbtxSLpF6AuoKeEkGfWGSF5+hBqXlIwU+Qn5EDFA/KCFIksDvf4
 YPLsnsidXqbM1tBvo7VLcIw7TIN724I7DDjdWbLMcl5W+DsONqD5FUat+nI5ACbD
@@ -104,8 +100,10 @@ const formatter: stylelint.FormatterType = results => {
     annotations: createAnnotations(results),
     errorCount,
     warningCount,
-    appId: APP_ID,
-    privateKey: PRIVATE_KEY
+    appId: process.env.STYLELINT_APP_ID
+      ? Number(process.env.STYLELINT_APP_ID)
+      : APP_ID,
+    privateKey: process.env.STYLELINT_PRIVATE_KEY || PRIVATE_KEY
   });
 
   return pretty(results);

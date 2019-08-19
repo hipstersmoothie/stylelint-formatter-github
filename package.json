@@ -76,6 +76,15 @@
     "plugins": [
       "npm",
       "released"
+    ],
+    "labels": {
+      "dependencies": {
+        "name": "dependencies",
+        "title": "Dependency Updates"
+      }
+    },
+    "skipReleaseLabels": [
+      "dependencies"
     ]
   }
 }

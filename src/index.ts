@@ -1,11 +1,8 @@
 import path from 'path';
 import stylelint from 'stylelint';
-import execa from 'execa';
+import createCheck from 'create-check';
 import pretty from 'stylelint-formatter-pretty';
-import envCi from 'env-ci';
 
-import { request } from '@octokit/request';
-import { App } from '@octokit/app';
 import Octokit from '@octokit/rest';
 
 const APP_ID = process.env.STYLELINT_APP_ID
@@ -54,32 +51,6 @@ j38c+yyejze8RnBpD3ADdlXjhsIFhkE0XKaXGPlA0omNWKRqh4QAvJYigBJZthXW
 vEmNUgO5zSXutnnYyVCuiuBdYbWAdbqHFwOLtywHZOSUimIdccM=
 -----END RSA PRIVATE KEY-----`;
 
-const { isCi, ...env } = envCi();
-const app = new App({ id: APP_ID, privateKey: PRIVATE_KEY });
-const jwt = app.getSignedJsonWebToken();
-const [owner = '', repo = ''] = 'slug' in env ? env.slug.split('/') : [];
-
-async function authenticateApp() {
-  const { data } = await request('GET /repos/:owner/:repo/installation', {
-    owner,
-    repo,
-    headers: {
-      authorization: `Bearer ${jwt}`,
-      accept: 'application/vnd.github.machine-man-preview+json'
-    }
-  });
-
-  const installationId = data.id;
-  const token = await app.getInstallationAccessToken({
-    installationId
-  });
-
-  return new Octokit({
-    auth: token,
-    previews: ['symmetra-preview']
-  });
-}
-
 function createAnnotations(results: stylelint.LintResult[]) {
   const annotations: Octokit.ChecksCreateParamsOutputAnnotations[] = [];
   const levels: Record<
@@ -110,37 +81,6 @@ function createAnnotations(results: stylelint.LintResult[]) {
   return annotations;
 }
 
-async function addCheck(
-  results: stylelint.LintResult[],
-  errorCount: number,
-  warningCount: number
-) {
-  if (!isCi) {
-    return;
-  }
-
-  const annotations = createAnnotations(results);
-  const HEAD = await execa('git', ['rev-parse', 'HEAD']);
-  const octokit = await authenticateApp();
-  const summary =
-    (errorCount > 0 && 'Your project seems to have some errors.') ||
-    (warningCount > 0 && 'Your project seems to have some warnings.') ||
-    'Your project passed lint!';
-
-  await octokit.checks.create({
-    owner,
-    repo,
-    name: 'Lint',
-    head_sha: HEAD.stdout,
-    conclusion: (errorCount > 0 && 'failure') || 'success',
-    output: {
-      title: 'stylelint Results',
-      summary,
-      annotations
-    }
-  });
-}
-
 const formatter: stylelint.FormatterType = results => {
   let errorCount = 0;
   let warningCount = 0;
@@ -158,7 +98,15 @@ const formatter: stylelint.FormatterType = results => {
       .length;
   });
 
-  addCheck(results, errorCount, warningCount);
+  createCheck({
+    tool: 'stylelint',
+    name: 'Check Styles for Errors',
+    annotations: createAnnotations(results),
+    errorCount,
+    warningCount,
+    appId: APP_ID,
+    privateKey: PRIVATE_KEY
+  });
 
   return pretty(results);
 };

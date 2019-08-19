@@ -134,7 +134,7 @@ async function addCheck(
     head_sha: HEAD.stdout,
     conclusion: (errorCount > 0 && 'failure') || 'success',
     output: {
-      title: 'ESLint Results',
+      title: 'stylelint Results',
       summary,
       annotations
     }

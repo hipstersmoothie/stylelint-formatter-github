@@ -1,3 +1,21 @@
+# v0.3.0 (Tue Aug 20 2019)
+
+#### 🚀  Enhancement
+
+- expose configured create check [#11](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/11) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Dependency Updates
+
+- Update dependency eslint-plugin-jsdoc to v15.8.3 [#10](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/10) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency eslint to v6.2.1 [#9](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/9) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 2
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Renovate Bot ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.2.3 (Mon Aug 19 2019)
 
 #### 🐛  Bug Fix

@@ -1,3 +1,15 @@
+# v0.3.1 (Wed Aug 21 2019)
+
+#### 🐛  Bug Fix
+
+- Update dependency create-check to ^0.4.0 [#12](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/12) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- Renovate Bot ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.3.0 (Tue Aug 20 2019)
 
 #### 🚀  Enhancement

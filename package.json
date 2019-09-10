@@ -1,6 +1,6 @@
 {
   "name": "stylelint-formatter-github",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "See stylelint errors and warnings directly in pull requests",
   "license": "MIT",
   "repository": "hipstersmoothie/stylelint-formatter-github",

@@ -1,8 +1,6 @@
 import path from 'path';
 import stylelint from 'stylelint';
-import createCheck from 'create-check';
-
-import Octokit from '@octokit/rest';
+import createCheck, { Annotation } from 'create-check';
 
 const APP_ID = 38894;
 /**
@@ -47,11 +45,8 @@ vEmNUgO5zSXutnnYyVCuiuBdYbWAdbqHFwOLtywHZOSUimIdccM=
 -----END RSA PRIVATE KEY-----`;
 
 function createAnnotations(results: stylelint.LintResult[]) {
-  const annotations: Octokit.ChecksCreateParamsOutputAnnotations[] = [];
-  const levels: Record<
-    stylelint.Severity,
-    Octokit.ChecksCreateParamsOutputAnnotations['annotation_level']
-  > = {
+  const annotations: Annotation[] = [];
+  const levels: Record<stylelint.Severity, Annotation['annotation_level']> = {
     warning: 'warning',
     error: 'failure'
   };

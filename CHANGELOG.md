@@ -1,3 +1,36 @@
+# v1.0.1 (Mon May 11 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency auto to v9 [#64](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/64) ([@renovate-bot](https://github.com/renovate-bot) [@hipstersmoothie](https://github.com/hipstersmoothie) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/eslint to v6.8.0 [#74](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/74) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-plugin-jsdoc to v25 [#75](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/75) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-config-xo to v0.29.1 [#53](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/53) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency husky to v4 [#69](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/69) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-config-airbnb-base to v14.1.0 [#70](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/70) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-plugin-prettier to v3.1.3 [#62](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/62) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency strip-ansi to v6 [#57](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/57) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency lint-staged to v9.5.0 [#50](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/50) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint to v7 [#73](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/73) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency stylelint to v11.1.1 [#52](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/52) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency typescript to v3.8.3 [#51](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/51) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency prettier to v1.19.1 [#56](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/56) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-plugin-jsdoc to v15.12.2 [#46](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/46) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency husky to v3.1.0 [#45](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/45) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-config-prettier to v6.11.0 [#48](https://github.com/hipstersmoothie/stylelint-formatter-github/pull/48) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v1.0.0 (Mon May 11 2020)
 
 #### 💥  Breaking Change

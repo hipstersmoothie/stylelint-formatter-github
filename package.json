@@ -5,6 +5,9 @@
   "license": "MIT",
   "repository": "hipstersmoothie/stylelint-formatter-github",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=10.x"
+  },
   "author": {
     "name": "Andrew Lisowski",
     "email": "lisowski54@gmail.com"

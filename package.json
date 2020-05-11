@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "create-check": "^0.6.36",
-    "stylelint-formatter-pretty": "^1.1.2"
+    "stylelint-formatter-pretty": "^2.0.0"
   },
   "resolutions": {
     "postcss-markdown": "https://github.com/gucong3000/postcss-markdown"
